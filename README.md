@@ -15,11 +15,17 @@ other assumptions]
 ## Requirements
 | Requirement | Description | Verification Method |
 |---|---|---|
-| REQ-01 | [The design shall ...] | [Test case, waveform, calculation, or
+| Latch | Passes the data through on the clock cycle | [Test case, waveform, calculation, or
 inspection] |
-| REQ-02 | [The design shall ...] | [Test case, waveform, calculation, or
+| Instruction Memory | Holds 2^32 words, For now populate the first 10 addresses with Dummy Data, and Returns the instruction at a given address | [Test case, waveform, calculation, or
 inspection] |
-| REQ-03 | [The design shall ...] | [Test case, waveform, calculation, or
+| PC | Passes the input as the output on the clock cycle | [Test case, waveform, calculation, or
+inspection] |
+| Mux | Selects source of the next PC address | [Test case, waveform, calculation, or
+inspection] |
+| Adder | Calculates the address of the next sequential instruction by adding 4 to the current PC | [Test case, waveform, calculation, or
+inspection] |
+| Final IF Stage | Module with all 5 components | [Test case, waveform, calculation, or
 inspection] |
 
 ## Architecture
