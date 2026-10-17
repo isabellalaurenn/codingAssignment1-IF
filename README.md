@@ -38,12 +38,12 @@ display on GitHub.
 ### Source Code
 | File | Description |
 |---|---|
-| [`ifIdLatch.v`](LINK_TO_IMPLEMENTATION_CODE) | [Primary implementation module] |
-| [`mem.v`](LINK_TO_COMPONENT_CODE) | [Supporting component] |
-| [`pc.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
-| [`mux.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
-| [`adder.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
-| [`[FINALIFSTAGE].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`ifIdLatch.v`](LINK_TO_CODE) | Dictates when to move to the next instruction on clock edge. |
+| [`mem.v`](LINK_TO_CODE) | Reads instruction memory data at a specific location. |
+| [`pc.v`](LINK_TO_CODE) | Holds current state at clock edge. |
+| [`mux.v`](LINK_TO_CODE) | Decides where the processor will continue. |
+| [`adder.v`](LINK_TO_CODE) | Combinational logic calculating next sequential instruction address. |
+| [`[FINALIFSTAGE].v`](LINK_TO_CODE) | [Verification testbench] |
 | [`[TESTBENCH].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
 
 ### Implementation Notes
