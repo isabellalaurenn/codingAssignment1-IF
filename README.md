@@ -72,10 +72,10 @@ The testbench source is available [*here*](LINK_TO_TESTBENCH_CODE).
 
 ## Reproduction Instructions
 ### Tools and Versions
-- **Simulator / synthesis tool:** [Name and version]
-- **Language / standard:** [Verilog/SystemVerilog version]
-- **Operating system:** [macOS, Windows, Linux, or other]
-- **Additional dependencies:** [List any required tools or libraries]
+- **Simulator / synthesis tool:** Vivado
+- **Language / standard:** Verilog
+- **Operating system:** Windows
+- **Additional dependencies:** n/a
 ### Build and Run
 ```bash
 # Replace these commands with the commands required for this lab.
