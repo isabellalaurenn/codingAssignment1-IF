@@ -94,5 +94,5 @@ Expected output:
 ```
 
 ## Known Issues and Future Improvements
-- [Document any known issue, unverified behavior, or technical debt.]
-- [Describe a realistic improvement or extension.]
+- The instruction memory can only store 64 words because of Vivado's limits, so to fully implement the 2^32 words a different software perhaps is needed.
+- In future labs, we could enable a flush signal to handle pipeline hazards.
