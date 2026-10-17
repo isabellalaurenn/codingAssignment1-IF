@@ -14,7 +14,7 @@ module fetch(
   mux mux0(
     .out(pc_mux),
     .in1(mem_npc),
-    .in2(pc_4),
+    .in0(pc_4),
     .sel(mem_pc_src)
   );
 
