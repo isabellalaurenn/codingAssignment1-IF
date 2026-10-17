@@ -47,10 +47,10 @@ The PC holds the address of the instruction being fetched. The adder computes PC
 ### Verification Strategy
 The design is verified using **timing diagrams**.
 Verification covers:
-- [Normal operating case]
-- [Boundary or maximum-value case]
-- [Reset or initialization case]
-- [Invalid, stalled, or exceptional case, if applicable]
+- Normal operating case: the PC counts up by 4 each clock and matching instructions are fetched.
+- Boundary case: fetching the last populated instruction (90000099) and branches back to address 0.
+- Initialization case: all are set to 32'h00000000; 
+
 ### Testbench and Waveform
 Save screenshots and waveform images in the repository's `images/` folder.
 ![Testbench or waveform](images/[testbench-screenshot-filename].png)
