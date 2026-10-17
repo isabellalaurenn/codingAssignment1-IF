@@ -2,13 +2,13 @@
 module adder(
   input clk,
   input rst,
-  input [31:0] pcin,
-  output [31:0] pcout
+  input [31:0] pc_in,
+  output [31:0] pc_out
 );
 
   always @(posedge clk) begin
-    if (rst) pcout <= 32'b0;
-    else pcout <= pcin + 32'd4; //adding a byte to pc result
+    if (rst) pc_out <= 32'b0;
+    else pc_out <= pc_in + 32'd4; //adding a byte to pc result
   end
   
 endmodule
