@@ -8,9 +8,8 @@ verified.
 ## Design Scope and Assumptions
 - **In scope:** The purpose of this lab is to begin our MIPS pipeline with the first stage - fetch.
 - **Out of scope:** The remaining stages of the MIPS pipeline will be implemented in future labs.
-- **Assumptions:** [Clock frequency, reset behavior, data width, memory model, or
-other assumptions]
-- **Limitations:** Because of the Vivado structure, we were unable to fully incorporate the 2^32 words. But, we were still able to see how it would function, just with a smaller size.
+- **Assumptions:** Memory is byte-addressed, so each 32-bit instruction is 4 bytes and the PC advances by 4. The testbench clock toggles every 1 ns, and all clocked modules update on the rising edge.
+- **Limitations:** Vivado cannot build a real 2^32 word array, so mem.v store only the first 64 byte addresses. The first 10 instructions hold dummy data, and every other address returns 0. Additionally, there is no stall or flush logic, os hazards are not handled in this stage.
 - 
 ## Requirements
 | Requirement | Description | Verification Method |
