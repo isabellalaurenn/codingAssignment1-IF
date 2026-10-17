@@ -14,18 +14,12 @@ verified.
 ## Requirements
 | Requirement | Description | Verification Method |
 |---|---|---|
-| Latch | Passes the data through on the clock cycle | [Test case, waveform, calculation, or
-inspection] |
-| Instruction Memory | Holds 2^32 words, For now populate the first 10 addresses with Dummy Data, and Returns the instruction at a given address | [Test case, waveform, calculation, or
-inspection] |
-| PC | Passes the input as the output on the clock cycle | [Test case, waveform, calculation, or
-inspection] |
-| Mux | Selects source of the next PC address | [Test case, waveform, calculation, or
-inspection] |
-| Adder | Calculates the address of the next sequential instruction by adding 4 to the current PC | [Test case, waveform, calculation, or
-inspection] |
-| Final IF Stage | Module with all 5 components | [Test case, waveform, calculation, or
-inspection] |
+| Latch | Passes the data through on the clock cycle | Waveform: if_id_npc and if_id_instr change only on the rising clock edges and reset to 0 when rst is high |
+| Instruction Memory | Holds 2^32 words, For now populate the first 10 addresses with Dummy Data, and Returns the instruction at a given address | Waveform: if_id_instr shows the HEX values for the PC values|
+| PC | Passes the input as the output on the clock cycle | Waveform: pc_out takes the value of pc_in on each rising edge|
+| Mux | Selects source of the next PC address | Waveform: with mem_pc_src = 1 the PC loads mem_mpc0 and with mem_pc_src = 0 it follows the adder |
+| Adder | Calculates the address of the next sequential instruction by adding 4 to the current PC | Waveform: if_id_npc is always the current address and steps up each clock|
+| Final IF Stage | Module with all 5 components | Incoporating all of the above in the full-stage testbench fetch-tb.v|
 
 ## Architecture
 ### Timing or Behavioral Summary
@@ -42,8 +36,8 @@ display on GitHub.
 | [`pc.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/pc.v) | Holds current state at clock edge. |
 | [`mux.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mux.v) | Decides where the processor will continue. |
 | [`adder.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/adder.v) | Combinational logic calculating next sequential instruction address. |
-| [`fetch.v`]((https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch.v)) | [Verification testbench] |
-| [`[TESTBENCH].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`fetch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch.v) | [Verification testbench] |
+| [`fetch_tb.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch_tb.v) | [Verification testbench] |
 
 ### Implementation Notes
 - [Explain one important design decision.]
