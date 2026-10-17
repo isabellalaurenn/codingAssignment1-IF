@@ -1,6 +1,7 @@
 //the whole fetch stage combined
 module fetch(
   input clk,
+  input rst,
   input mem_pc_src,
   input [31:0] mem_npc,
   output [31:0] if_id_instr,
@@ -20,6 +21,7 @@ module fetch(
 
   pc pc0 (
     .clk(clk),
+    .rst(rst),
     .pc_in(pc_mux),
     .pc_out(pc_out)
   );
