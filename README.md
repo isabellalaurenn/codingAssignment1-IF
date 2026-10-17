@@ -10,7 +10,7 @@ verified.
 - **Out of scope:** The remaining stages of the MIPS pipeline will be implemented in future labs.
 - **Assumptions:** [Clock frequency, reset behavior, data width, memory model, or
 other assumptions]
-- **Limitations:** [Known limitations or simplified behaviors]
+- **Limitations:** Because of the Vivado structure, we were unable to fully incorporate the 2^32 words. But, we were still able to see how it would function, just with a smaller size.
 - 
 ## Requirements
 | Requirement | Description | Verification Method |
