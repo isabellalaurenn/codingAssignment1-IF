@@ -23,6 +23,7 @@ verified.
 
 ## Architecture
 ### Timing or Behavioral Summary
+The PC holds the address of the instruction being fetched. The adder computes PC+4 and the mux chooses between that value and the jump target from a later pipeline stage. The chosen value is loaded into the PC on the next rising clock edge. The PC address is sent to the instruction memory, and the adder value and the fetched instruction are captured by the if/id latch on the rising clock edge, so the next stage sees them in the next clock.
 ![Our fetch_tb.v Waveform](images/waveform.png)
 
 ## Implementation
