@@ -8,6 +8,11 @@ module if_id_latch(
   output reg [31:0] instr_out
 );
 
+  initial begin //adding initialization
+    pc_out = 32'b0;
+    instr_out = 32'b0;
+  end
+
   always @(posedge clk) begin
     if (rst) begin
       pc_out <= 32'b0;
