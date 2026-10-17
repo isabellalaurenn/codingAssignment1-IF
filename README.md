@@ -23,9 +23,7 @@ verified.
 
 ## Architecture
 ### Timing or Behavioral Summary
-Save diagrams in the repository's `images/` folder. Use relative paths so they
-display on GitHub.
-![Timing Diagram](images/[timing-diagram-filename].png)
+!Our fetch_tb.v Waveform(images/waveform.png)
 
 ## Implementation
 ### Source Code
