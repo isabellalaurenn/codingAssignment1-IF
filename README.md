@@ -52,9 +52,9 @@ Verification covers:
 - Initialization case: all are set to 32'h00000000; 
 
 ### Testbench and Waveform
-Save screenshots and waveform images in the repository's `images/` folder.
-![Testbench or waveform](images/[testbench-screenshot-filename].png)
-The testbench source is available [*here*](LINK_TO_TESTBENCH_CODE).
+![fetch_tb Waveform](images/waveform.png)
+The testbench source is available [*here*](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch_tb.v).
+
 ### Results
 | Test Case | Expected Result | Observed Result | Status |
 |---|---|---|---|
