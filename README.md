@@ -57,9 +57,10 @@ The testbench source is available [*here*](https://github.com/isabellalaurenn/co
 ### Results
 | Test Case | Expected Result | Observed Result | Status |
 |---|---|---|---|
-| TC-01 — Sequential Fetch | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-02 — Branch Taken| [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-03 — Resume After Branch | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-01 — Reset | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-02 — Sequential Taken| [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-03 — Branch Taken | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-04 — Resume After Branch  | [Expected behavior] | [Observed behavior] | Pass / Fail |
 
 ## Reproduction Instructions
 ### Tools and Versions
