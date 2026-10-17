@@ -23,7 +23,7 @@ verified.
 
 ## Architecture
 ### Timing or Behavioral Summary
-![Our fetch_tb.v Waveform] (images/waveform.png)
+![Our fetch_tb.v Waveform](images/waveform.png)
 
 ## Implementation
 ### Source Code
