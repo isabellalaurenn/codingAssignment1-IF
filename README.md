@@ -57,10 +57,10 @@ The testbench source is available [*here*](https://github.com/isabellalaurenn/co
 ### Results
 | Test Case | Expected Result | Observed Result | Status |
 |---|---|---|---|
-| TC-01 — Reset | For the first few clock cycles, while rst is high, pc_out, if_id_npc, and if_id_instr are 0 | [Observed behavior] | Pass / Fail |
-| TC-02 — Sequential Taken| [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-03 — Branch Taken | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-04 — Resume After Branch  | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-01 — Reset | For the first few clock cycles, while rst is high, pc_out, if_id_npc, and if_id_instr are 0 | All signals are 0| Pass |
+| TC-02 — Sequential Taken| PC counts up by 4, and if_id_npc equals PC. if_id_instr shows the corresponding addresses  | Matches expected values | Pass  |
+| TC-03 — Branch Taken | When mem_pc_src = 1 and mem_npc = 0, the PC returns to 0. if_id_npc stays at 4 and if_id_instr stays at A00000AA | Matches expected values| Pass  |
+| TC-04 — Resume After Branch  | After mem_pc_src returns to 0, the PC counts up by 4 again, and if_id_instr goes to 90000099 | Matches expected values | Pass  |
 
 ## Reproduction Instructions
 ### Tools and Versions
