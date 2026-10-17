@@ -1,5 +1,5 @@
 //if id latch module
-module if_id(
+module if_id_latch(
   input clk,
   input rst,
   input [31:0] pc_in,
