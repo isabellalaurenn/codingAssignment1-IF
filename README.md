@@ -10,7 +10,7 @@ verified.
 - **Out of scope:** The remaining stages of the MIPS pipeline will be implemented in future labs.
 - **Assumptions:** Memory is byte-addressed, so each 32-bit instruction is 4 bytes and the PC advances by 4. The testbench clock toggles every 1 ns, and all clocked modules update on the rising edge.
 - **Limitations:** Vivado cannot build a real 2^32 word array, so mem.v store only the first 64 byte addresses. The first 10 instructions hold dummy data, and every other address returns 0. Additionally, there is no stall or flush logic, os hazards are not handled in this stage.
-- 
+
 ## Requirements
 | Requirement | Description | Verification Method |
 |---|---|---|
@@ -30,19 +30,19 @@ The PC holds the address of the instruction being fetched. The adder computes PC
 ### Source Code
 | File | Description |
 |---|---|
-| [`if_id_latch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/if_id_latch.v) | Dictates when to move to the next instruction on clock edge. |
-| [`mem.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mem.v) | Reads instruction memory data at a specific location. |
-| [`pc.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/pc.v) | Holds current state at clock edge. |
-| [`mux.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mux.v) | Decides where the processor will continue. |
-| [`adder.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/adder.v) | Combinational logic calculating next sequential instruction address. |
-| [`fetch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch.v) | [Verification testbench] |
-| [`fetch_tb.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch_tb.v) | [Verification testbench] |
+| [`if_id_latch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/if_id_latch.v) | Dictates when to move to the next instruction on clock edge |
+| [`mem.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mem.v) | Reads instruction memory data at a specific location |
+| [`pc.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/pc.v) | Holds current state at clock edge |
+| [`mux.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mux.v) | Decides where the processor will continue |
+| [`adder.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/adder.v) | Combinational logic calculating next sequential instruction address |
+| [`fetch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch.v) | Top level fetch stage that connects all of the above modules |
+| [`fetch_tb.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch_tb.v) | Verification testbench for the full fetch stage |
 
 ### Implementation Notes
-- [Explain one important design decision.]
-- [Identify any parameterization, reusable module, or interface convention.]
-- [Document any deliberate simplification made for this lab.]
-- 
+- The memory is byte addressed, so the adder adds 4 instead of 1, and the dummy instructions are stored at the corresponding addresses.
+- Every clocked module uses the same interface convention, a clk input and rst input. The adder and memory don't require but still keep these (since they are combinational) but keep consistency.
+- Because Vivado cannot build a 2^32 word array, we deliberately simplified mem.v to store 64 words and return 0 for addresses outside that range.
+  
 ## Verification
 ### Verification Strategy
 The design is verified using **timing diagrams**.
