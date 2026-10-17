@@ -53,8 +53,7 @@ display on GitHub.
 - 
 ## Verification
 ### Verification Strategy
-The design is verified using **[simulation, formal checks, hardware testing, or
-another method]**.
+The design is verified using **timing diagrams**.
 Verification covers:
 - [Normal operating case]
 - [Boundary or maximum-value case]
