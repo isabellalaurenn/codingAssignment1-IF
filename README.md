@@ -38,7 +38,7 @@ display on GitHub.
 ### Source Code
 | File | Description |
 |---|---|
-| [`ifIdLatch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/ifIdLatch.v) | Dictates when to move to the next instruction on clock edge. |
+| [`if_id_latch.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/if_id_latch.v) | Dictates when to move to the next instruction on clock edge. |
 | [`mem.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mem.v) | Reads instruction memory data at a specific location. |
 | [`pc.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/pc.v) | Holds current state at clock edge. |
 | [`mux.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mux.v) | Decides where the processor will continue. |
