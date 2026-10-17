@@ -43,7 +43,7 @@ display on GitHub.
 | [`pc.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/pc.v) | Holds current state at clock edge. |
 | [`mux.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/mux.v) | Decides where the processor will continue. |
 | [`adder.v`](https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/adder.v) | Combinational logic calculating next sequential instruction address. |
-| [`[FINALIFSTAGE].v`](LINK_TO_CODE) | [Verification testbench] |
+| [`fetch.v`]((https://github.com/isabellalaurenn/codingAssignment1-IF/blob/main/fetch.v)) | [Verification testbench] |
 | [`[TESTBENCH].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
 
 ### Implementation Notes
