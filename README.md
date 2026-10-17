@@ -24,7 +24,6 @@ verified.
 ## Architecture
 ### Timing or Behavioral Summary
 The PC holds the address of the instruction being fetched. The adder computes PC+4 and the mux chooses between that value and the jump target from a later pipeline stage. The chosen value is loaded into the PC on the next rising clock edge. The PC address is sent to the instruction memory, and the adder value and the fetched instruction are captured by the if/id latch on the rising clock edge, so the next stage sees them in the next clock.
-![Our fetch_tb.v Waveform](images/waveform.png)
 
 ## Implementation
 ### Source Code
@@ -58,9 +57,9 @@ The testbench source is available [*here*](https://github.com/isabellalaurenn/co
 ### Results
 | Test Case | Expected Result | Observed Result | Status |
 |---|---|---|---|
-| TC-01 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-02 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-03 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-01 — Sequential Fetch | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-02 — Branch Taken| [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-03 — Resume After Branch | [Expected behavior] | [Observed behavior] | Pass / Fail |
 
 ## Reproduction Instructions
 ### Tools and Versions
@@ -84,10 +83,14 @@ Expected output:
 .
 ├── README.md
 ├── images/
-│ ├── [timing-diagram-filename].png
-│ └── [testbench-screenshot-filename].png
-├── [source-files]
-└── [testbench-files]
+│ └── waveform.png
+├── adder.v
+├── fetch.v
+├── fetch_tb.v
+├── if_id_latch.v
+├── mem.v
+├── mux.v
+└── pc.v
 ```
 
 ## Known Issues and Future Improvements
