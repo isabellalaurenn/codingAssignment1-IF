@@ -6,8 +6,8 @@ verified.
 -->
 
 ## Design Scope and Assumptions
-- **In scope:** [What this lab implements]
-- **Out of scope:** [What this lab intentionally does not implement]
+- **In scope:** The purpose of this lab is to begin our MIPS pipeline with the first stage - fetch.
+- **Out of scope:** The remaining stages of the MIPS pipeline will be implemented in future labs.
 - **Assumptions:** [Clock frequency, reset behavior, data width, memory model, or
 other assumptions]
 - **Limitations:** [Known limitations or simplified behaviors]
@@ -33,13 +33,19 @@ inspection] |
 Save diagrams in the repository's `images/` folder. Use relative paths so they
 display on GitHub.
 ![Timing Diagram](images/[timing-diagram-filename].png)
+
 ## Implementation
 ### Source Code
 | File | Description |
 |---|---|
-| [`[module].v`](LINK_TO_IMPLEMENTATION_CODE) | [Primary implementation module] |
-| [`[component].v`](LINK_TO_COMPONENT_CODE) | [Supporting component] |
-| [`[testbench].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`ifIdLatch.v`](LINK_TO_IMPLEMENTATION_CODE) | [Primary implementation module] |
+| [`mem.v`](LINK_TO_COMPONENT_CODE) | [Supporting component] |
+| [`pc.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`mux.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`adder.v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`[FINALIFSTAGE].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+| [`[TESTBENCH].v`](LINK_TO_TESTBENCH_CODE) | [Verification testbench] |
+
 ### Implementation Notes
 - [Explain one important design decision.]
 - [Identify any parameterization, reusable module, or interface convention.]
