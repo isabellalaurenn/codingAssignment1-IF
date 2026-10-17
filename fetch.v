@@ -8,8 +8,6 @@ module fetch(
   output [31:0] if_id_npc
 );
 
-  wire rst = 1'b0;
-
   wire [31:0] pc_out, pc_4, pc_mux, instr_data;
 
   mux mux0(
