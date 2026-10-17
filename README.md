@@ -69,11 +69,17 @@ The testbench source is available [*here*](https://github.com/isabellalaurenn/co
 - **Additional dependencies:** n/a
 ### Build and Run
 ```bash
-In Vivado
+In Vivado,
+1) Create an RTL project and add adder.v, fetch.v, if_id_latch.v, mem.v, mux.v, and pc.v as Design Sources.
+2) Add fetch_tb.v as a Simulation Source and set it to the top module.
+3) Run a Behavioural Simulation
+4) Open the waveform window :)
 ```
 Expected output:
 ```text
-[Paste a short representative output or result here.]
+pc_out should increment by 4
+if_id_npc should incremeber by 4 as well
+if_id_instr should display the corresponding address
 ```
 
 ## Repository Organization
