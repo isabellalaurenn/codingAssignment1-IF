@@ -1,7 +1,7 @@
 //adder.v module
 module adder(
   input clk,
-  input rst
+  input rst,
   input [31:0] pcin,
   output [31:0] pcout
 );
