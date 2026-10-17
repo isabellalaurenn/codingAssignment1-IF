@@ -69,9 +69,7 @@ The testbench source is available [*here*](https://github.com/isabellalaurenn/co
 - **Additional dependencies:** n/a
 ### Build and Run
 ```bash
-# Replace these commands with the commands required for this lab.
-[compile-command]
-[run-command]
+In Vivado
 ```
 Expected output:
 ```text
